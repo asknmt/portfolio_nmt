@@ -1,0 +1,202 @@
+@media (max-width: 1050px){
+/*ハンバーガーボタン */
+.hamburger {
+  display : block;
+  position: fixed;
+  z-index : 3;
+  right : 32px;
+  top   : 16px;
+  width : 42px;
+  height: 42px;
+  cursor: pointer;
+  text-align: center;
+}
+.hamburger span {
+  display : block;
+  position: absolute;
+  width   : 30px;
+  height  : 2px ;
+  left    : 6px;
+  background : #5a4944;
+  -webkit-transition: 0.5s all;
+  -moz-transition   : 0.5s all;
+  transition        : 0.5s all;
+}
+.hamburger span:nth-child(1) {
+  top: 0;
+}
+.hamburger span:nth-child(2) {
+  top: 10px;
+}
+.hamburger span:nth-child(3) {
+  top: 20px;
+}
+
+/* ナビ開いてる時のボタン */
+.hamburger.active span:nth-child(1) {
+  top : 32px;
+  left: 6px;
+  width: 24px;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform   : rotate(-45deg);
+  transform        : rotate(-45deg);
+}
+.hamburger.active span:nth-child(2) {
+  left: 60%;
+  opacity: 0;
+  -webkit-animation: active-btn17-bar02 .8s forwards;
+  animation: active-hamburger-bar02 .8s forwards;
+}
+@-webkit-keyframes active-hamburger-bar02 {
+  100% {
+    height: 0;
+  }
+}
+@keyframes active-hamburger-bar02 {
+  100% {
+    height: 0;
+  }
+}
+.hamburger.active span:nth-child(3) {
+  top: 32px;
+  width: 24px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform   : rotate(45deg);
+  transform        : rotate(45deg);
+}
+
+.hamburger::after {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  display: block;
+  content: '';
+  width: 52px;
+  height: 52px;
+  margin: -32px 0 0 -32px;
+  border-radius: 50%;
+  transition: all .75s;
+}
+.hamburger.active::after {
+  border: 2px solid #555;
+}
+
+nav.globalMenuSp {
+  position: fixed;
+  z-index : 2;
+  top  : 0;
+  left : 0;
+  background: #fff;
+  text-align: center;
+  transform: translateY(-100%);
+  transition: all 0.6s;
+  width: 100%;
+}
+
+nav.globalMenuSp ul {
+  background: #d2deff;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+}
+
+nav.globalMenuSp ul li {
+  list-style-type: none;
+  padding: 0;
+  width: 18%;
+}
+nav.globalMenuSp ul li:last-child {
+  padding-bottom: 0;
+}
+
+nav.globalMenuSp ul li a {
+  display: block;
+  padding: 1.5em 0;
+  text-decoration :none;
+  width: 100%;
+}
+
+/* このクラスを、jQueryで付与・削除する */
+nav.globalMenuSp.active {
+  transform: translateY(0%);
+}
+.profile-title,.skill-title,.works-title,.contact-title {
+  width: 30%;
+  margin-bottom: 64px;
+}
+.profile,.skill,.works,.contact {
+  padding:56px 0 72px 0;
+}
+/*ヘッダー*/
+.header-logo img {
+  width: 40%;
+  margin-top: 8px;
+}
+/*トップ*/
+.top-name img{
+  width: 60%;
+  top: 12%;
+  left: 18%;
+}
+.top-back {
+  width: 100%;
+  height: 480px;
+}
+  /*プロフィール*/
+  .prof-size {
+    width: 90%;
+  }
+  .profile-img img {
+    width: 50%;
+  }  
+  .prof-p1,.prof-p2 {
+    font-size: 1.3rem;
+    width: 100%;
+  }  
+  .prof-sentence {
+    width: 45%;
+  }  
+  .prof-p1 {
+    width: 90%;
+  }  
+  /*スキル*/
+  .skill {
+    width: 100%;
+  }
+  .skill-size {
+    width: 90%;
+  }
+  .skill-flex {
+    width: 100%;
+  }
+  .skill-flex img {
+    width: 90%;
+  }
+  .skill-text {
+    width: 90%;
+  }
+  .skill-text h3 {
+    font-size: 1.5rem;
+  }  
+  .skill-text p {
+    font-size: 1.3rem;
+  }  
+  /*works*/
+  .screen {
+    width: 48%;
+  }
+  .logo-screen p {
+    margin-top: 72px;
+  }
+  /*コンタクト*/
+  .contact-flex {
+    width: 100%;
+  }
+  .contact-text h4 {
+    font-size: 1.5rem;
+    line-height: 30px;
+  }
+  .contact-flex img {
+    width: 10%;
+  }  
+}
